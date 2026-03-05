@@ -1,0 +1,40 @@
+{
+  "name": "maatify/validation",
+  "description": "Schema-based validation library for PHP applications",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohamed Abdulalim",
+      "email": "mohamed@maatify.dev"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "respect/validation": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maatify\\Validation\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.11",
+    "phpunit/phpunit": "^11.0",
+    "php-di/php-di": "^7.0"
+  },
+
+
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+
+  "scripts": {
+    "test": "phpunit",
+    "analyse": "phpstan analyse src --level=max"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
