@@ -56,7 +56,7 @@ without knowing anything about HTTP, JSON, or Validation internals.
 All guard-related denial reasons are expressed using:
 
 ```php
-App\Validation\Enum\AuthErrorCodeEnum
+Maatify\Validation\Enum\AuthErrorCodeEnum
 ````
 
 Examples:
@@ -74,7 +74,7 @@ Guards signal denial by throwing a typed exception.
 ### 📄 Example Exception
 
 ```php
-use App\Validation\Enum\AuthErrorCodeEnum;
+use Maatify\Validation\Enum\AuthErrorCodeEnum;
 use RuntimeException;
 
 final class AuthFailedException extends RuntimeException
@@ -105,7 +105,7 @@ final class AuthFailedException extends RuntimeException
 ### 📄 Example Guard
 
 ```php
-use App\Validation\Enum\AuthErrorCodeEnum;
+use Maatify\Validation\Enum\AuthErrorCodeEnum;
 
 final class AuthorizationGuard
 {
@@ -135,7 +135,7 @@ Guards are typically executed inside middleware or controller flow.
 ### 📄 Example Middleware Handler
 
 ```php
-use App\Validation\ErrorMapper\SystemApiErrorMapper;
+use Maatify\Validation\ErrorMapper\SystemApiErrorMapper;
 
 try {
     $guard->assertAllowed($permissionGranted);
