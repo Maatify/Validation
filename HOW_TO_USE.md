@@ -4,7 +4,7 @@ This guide explains **how to use the Validation module** in controllers and
 application flow.
 
 It assumes:
-- The Validation module is available under the project namespace `App\Modules\Validation`
+- The Validation module is available under the project namespace `Maatify\Validation`
 - `respect/validation` is installed
 - PHP 8.2+
 - PHPStan level max compatibility is required
@@ -25,9 +25,9 @@ Example:
 ### Step 2 — Validate the Input
 
 ```php
-use App\Modules\Validation\Validator\RespectValidator;
-use app\Modules\Validation\Schemas\AuthLoginSchema;
-use app\Modules\Validation\ErrorMapper\SystemApiErrorMapper;
+use Maatify\Validation\Validator\RespectValidator;
+use Maatify\Validation\Schemas\AuthLoginSchema;
+use Maatify\Validation\ErrorMapper\SystemApiErrorMapper;
 
 /** @var array<string, mixed> $input */
 $input = (array) $request->getParsedBody();
@@ -82,9 +82,9 @@ if (!$result->isValid()) {
 All schemas **must extend `AbstractSchema`**.
 
 ```php
-use app\Modules\Validation\Schemas\AbstractSchema;
-use app\Modules\Validation\Rules\RequiredStringRule;
-use app\Modules\Validation\Enum\ValidationErrorCodeEnum;
+use Maatify\Validation\Schemas\AbstractSchema;
+use Maatify\Validation\Rules\RequiredStringRule;
+use Maatify\Validation\Enum\ValidationErrorCodeEnum;
 
 final class ExampleSchema extends AbstractSchema
 {

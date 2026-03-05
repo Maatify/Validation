@@ -17,7 +17,7 @@ A **type-safe, framework-agnostic input validation module** built on top of
 **Respect/Validation**, designed for clean architecture, strict static analysis,
 and future extraction as a standalone library.
 
-This module is used inside the Admin Control Panel but is **not coupled** to:
+This module is designed for standalone usage and is **not coupled** to:
 - Authentication
 - Authorization (Guards)
 - Domain Logic
